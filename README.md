@@ -9,7 +9,7 @@ Uma simples estrutura MVC para PHP.
 * _Task Runner_: _Gulp_;
 * Pré-processador: _SCSS_;
 * Uso de JavaScript _ES6_, compilado usando _Babel_;
-* Para compilar o Babel e minificá-lo, bem como gerenciar as dependência, usa-se o _gulp-webpack_;
+* Para compilar o Babel e minificá-lo, bem como gerenciar as dependências, usa-se o _gulp-webpack_;
 * _jQuery_ em uso;
 * _FontAwesome_ em uso.
 
