@@ -6,7 +6,7 @@
 
       # Definições iniciais:
       $url    = '/';
-      $params = array();
+      $params = [];
 
       if (isset($_GET['url'])) {
         $url = explode('/', $_GET['url']);
@@ -40,7 +40,7 @@
       }
 
       $controller = new $currentController();
-      call_user_func_array(array($controller, $currentAction), $params);
+      call_user_func_array([$controller, $currentAction], $params);
     }
   }
 ?>

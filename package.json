@@ -9,7 +9,8 @@
   "author": "Luiz Felipe Frazão <frazaolipe@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

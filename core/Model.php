@@ -6,7 +6,6 @@
     public function __construct ()
     {
       global $pdo;
-
       $this->pdo = $pdo;
     }
   }

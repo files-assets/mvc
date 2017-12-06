@@ -3,7 +3,9 @@
   {
     public function index ()
     {
-      $this->render('error404');
+      $this->render('error404', [
+        'page_title' => 'Erro 404'
+      ]);
     }
   }
 ?>

@@ -14,24 +14,24 @@ gulp.task('default', ['scss', 'js', 'watch']);
 
 gulp.task('watch', function () {
   gulp.watch([
-    '_front-end/js/*.js',
-    '_front-end/js/**/*.js',
-    '_front-end/scss/*.scss',
-    '_front-end/scss/**/*.scss',
-    '_front-end/scss/**/**/*.scss'
+    '_dev/js/*.js',
+    '_dev/js/**/*.js',
+    '_dev/scss/*.scss',
+    '_dev/scss/**/*.scss',
+    '_dev/scss/**/**/*.scss'
   ], ['scss', 'js']);
 });
 
 gulp.task('scss', function () {
-  gulp.src('_front-end/scss/index.scss')
+  gulp.src('_dev/scss/index.scss')
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(autoprefixer())
-    .pipe(gulp.dest('_front-end-src'))
+    .pipe(gulp.dest('assets'))
   ;
 });
 
 gulp.task('js', function () {
-  gulp.src('_front-end/js/index.js')
+  gulp.src('_dev/js/index.js')
     .pipe(gulpWebpack({
       module: {
         loaders: [{
@@ -40,11 +40,18 @@ gulp.task('js', function () {
           loader: 'babel-loader'
         }]
       },
-      plugins: [new webpack.optimize.UglifyJsPlugin()],
+      plugins: [
+        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.ProvidePlugin({
+          $: 'jquery',
+          jQuery: 'jquery',
+          Popper: 'popper.js'
+        })
+      ],
       output: {
         filename: 'all.js'
       }
     }, webpack))
-    .pipe(gulp.dest('_front-end-src'))
+    .pipe(gulp.dest('assets'))
   ;
 });
