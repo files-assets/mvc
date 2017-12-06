@@ -5,7 +5,7 @@
   date_default_timezone_set('America/Sao_Paulo');
 
   define('NAME', 'Project Name');
-  define('BASE_URL', 'http://project.dev');
+  define('BASE_URL', 'http://localhost/mvc');
 
   /**
    * Conexão com a base de dados:
