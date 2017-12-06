@@ -12,12 +12,12 @@
 
   <link rel="shortcut icon" href="<?php echo BASE_URL; ?>/default.ico" />
 
-  <link rel="stylesheet" href="<?php echo BASE_URL; ?>/_front-end-src/fontawesome/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="<?php echo BASE_URL; ?>/_front-end-src/index.css" />
+  <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/fontawesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/index.css" />
 </head>
 <body>
   <?php $this->renderInTemplate($name, $data); ?>
 
-  <script src="<?php echo BASE_URL; ?>/_front-end-src/all.js"></script>
+  <script src="<?php echo BASE_URL; ?>/assets/all.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
    */
   $dbconfig = [
     'host'     => 'localhost', // Host (IP);
-    'name'     => 'project',   // Nome do banco;
+    'name'     => 'rcc',   // Nome do banco;
     'user'     => 'root',      // Nome do usuário;
     'password' => '',          // Senha do usuário;
     'options'  => [
